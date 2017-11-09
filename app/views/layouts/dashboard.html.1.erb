@@ -44,20 +44,7 @@
   <div id="wrapper">
     <%= render "layouts/nav" %>
     <!-- /. NAV TOP  -->
-    
-    
-    
-    
-    <% if current_user.role =="Freelance" %>
-      <%= render "layouts/sidebar" %>
-    <% end %>
-    <% if current_user.role =="Client" %>
-      <%= render "layouts/sidebarclient" %>
-    <% end %>  
-      
-      
-      
-      
+    <%= render "layouts/sidebar" %>
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" >
       <div id="page-inner">
