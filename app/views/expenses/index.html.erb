@@ -1,0 +1,49 @@
+<% content_for :subtitulo do %>
+  Gastos
+<% end %>
+
+<%= link_to new_expense_path, class: "btn btn-success"  do%>
+  <i class="glyphicon glyphicon-plus"></i> Crear Gasto
+<% end %>
+
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Cantidad</th>
+    <th>Proceso</th>
+    <th>Fecha</th>
+    <th>Categoria</th>
+    <th>Estado</th>
+    <th>Vinculacion</th>
+    <th>Opciones</th>
+  </thead>
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td> <%= expense.quantity %> </td>
+        <td> <%= expense.process %> </td>
+        <td> <%= expense.date_expenses %> </td>
+        <td> <%= expense.category %> </td>
+        <td> <%= expense.state %> </td>
+        <td> <%= expense.vinculation %> </td>
+        <td>
+          <%= link_to edit_expense_path(expense), class: "btn btn-primary" do%>
+            <i class="glyphicon glyphicon-edit"></i> Editar
+          <% end %>
+        </td>
+        <td>
+          <%= link_to expense_path(expense), class: "btn btn-primary" do %>
+            <i class="glyphicon glyphicon-eye-open"></i> Detalle
+          <% end %>
+        </td>
+        <td>
+            <%= link_to expense_path(expense), class: "btn btn-danger", method: :delete,data: { confirm: 'Estas seguro de eliminar?' } do %>
+              <i class="glyphicon glyphicon-trash"></i> Borrar
+            <% end %>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

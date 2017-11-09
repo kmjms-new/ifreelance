@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idquotationregistry:</strong>
+  <%= @quotation_registry.idquotationregistry %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @quotation_registry.date %>
+</p>
+
+<p>
+  <strong>Nameclient:</strong>
+  <%= @quotation_registry.nameclient %>
+</p>
+
+<p>
+  <strong>Business:</strong>
+  <%= @quotation_registry.business %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @quotation_registry.product %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @quotation_registry.value %>
+</p>
+
+<p>
+  <strong>Validity:</strong>
+  <%= @quotation_registry.validity %>
+</p>
+
+<%= link_to 'Edit', edit_quotation_registry_path(@quotation_registry) %> 
+<%= link_to 'Back', quotation_registries_path %>
+<%= link_to 'PDF', quotation_registry_path(@quotation_registry, format: :pdf) %>

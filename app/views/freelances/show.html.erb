@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @freelance.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @freelance.email %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @freelance.total_amount %>
+</p>
+
+<%= link_to 'Edit', edit_freelance_path(@freelance) %> |
+<%= link_to 'Back', freelances_path %>

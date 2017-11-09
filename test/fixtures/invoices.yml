@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  date_invoice: 2017-10-21
+  end_date: 2017-10-21
+  name_client: MyString
+  total_value: 1.5
+  state: MyString
+
+two:
+  number: 1
+  date_invoice: 2017-10-21
+  end_date: 2017-10-21
+  name_client: MyString
+  total_value: 1.5
+  state: MyString

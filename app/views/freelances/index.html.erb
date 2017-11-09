@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Freelances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Total amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @freelances.each do |freelance| %>
+      <tr>
+        <td><%= freelance.name %></td>
+        <td><%= freelance.email %></td>
+        <td><%= freelance.total_amount %></td>
+        <td><%= link_to 'Show', freelance %></td>
+        <td><%= link_to 'Edit', edit_freelance_path(freelance) %></td>
+        <td><%= link_to 'Destroy', freelance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Freelance', new_freelance_path %>

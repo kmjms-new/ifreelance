@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Incomes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Clasification</th>
+      <th>Info</th>
+      <th>Name client</th>
+      <th>Name project</th>
+      <th>Developer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incomes.each do |income| %>
+      <tr>
+        <td><%= income.amount %></td>
+        <td><%= income.clasification %></td>
+        <td><%= income.info %></td>
+        <td><%= income.name_client %></td>
+        <td><%= income.name_project %></td>
+        <td><%= income.developer %></td>
+        <td><%= link_to 'Show', income %></td>
+        <td><%= link_to 'Edit', edit_income_path(income) %></td>
+        <td><%= link_to 'Destroy', income, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Income', new_income_path %>

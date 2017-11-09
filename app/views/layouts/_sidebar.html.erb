@@ -1,0 +1,49 @@
+<nav class="navbar-default navbar-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav" id="main-menu">
+      <li class="text-center">
+        <%= image_tag ('logo.PNG'), :class => 'user-image img-responsive' %>
+      </li>
+      <li>
+        <a href="/admin">
+          <i class="glyphicon glyphicon-home glyphicon3x"></i> Inicio
+        </a>
+      </li>
+      <li>
+        <%= link_to clients_path do%>
+          <i class="glyphicon glyphicon-user glyphicon3x"></i> Clientes
+        <% end %>
+      </li>
+      <li>
+        <%= link_to projects_path do%>
+          <i class="glyphicon glyphicon-pushpin glyphicon3x"></i> Proyectos
+        <% end %>
+      </li>
+      <li>
+        <%= link_to invoices_path do%>
+          <i class="glyphicon glyphicon-book glyphicon3x"></i> Facturas
+        <% end %>
+      </li>
+      <li>
+        <%= link_to expenses_path do%>
+          <i class="glyphicon glyphicon-th glyphicon3x"></i> Gastos
+        <% end %>
+      </li>
+      <li>
+      <%= link_to incomes_path do%>
+        <i class="glyphicon glyphicon-usd glyphicon3x"></i> Ingresos
+      <% end %>
+      </li>
+       <li>
+      <%= link_to freelances_path do%>
+        <i class="glyphicon glyphicon-paperclip glyphicon3x"></i> Freelances
+      <% end %>
+     </li>
+      <li>
+        <%= link_to quotation_registries_path do%>
+          <i class="glyphicon glyphicon-bullhorn glyphicon3x"></i> Cotizaciones
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

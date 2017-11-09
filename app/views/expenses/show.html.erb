@@ -1,0 +1,32 @@
+<% content_for :subtitulo do %>
+  Gasto: <%= @expense.process %>
+<% end %>
+
+Fecha de Creado: <%= @expense.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Cantidad</th>
+    <th>Proceso</th>
+    <th>Fecha</th>
+    <th>Categoria</th>
+    <th>Estado</th>
+    <th>Vinculacion</th>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @expense.quantity %> </td>
+        <td> <%= @expense.process %></td>
+        <td> <%= @expense.date_expenses %> </td>
+        <td> <%= @expense.category %> </td>
+        <td> <%= @expense.state %> </td>
+        <td> <%= @expense.vinculation %> </td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

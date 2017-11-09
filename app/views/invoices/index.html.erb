@@ -1,0 +1,49 @@
+<% content_for :subtitulo do %>
+  Facturas
+<% end %>
+
+<%= link_to new_invoice_path, class: "btn btn-success"  do%>
+  <i class="glyphicon glyphicon-plus"></i> Crear Factura
+<% end %>
+
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Numero</th>
+    <th>Fecha Creada</th>
+    <th>Fecha Limite</th>
+    <th>Nombre Cliente</th>
+    <th>Valor Total</th>
+    <th>Estado</th>
+  </thead>
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td> <%= invoice.number %> </td>
+        <td> <%= invoice.date_invoice %> </td>
+        <td> <%= invoice.end_date %> </td>
+        <td> <%= invoice.name_client %> </td>
+        <td> <%= invoice.total_value %> </td>
+        <td> <%= invoice.state %> </td>
+        <td>
+          <%= link_to edit_invoice_path(invoice), class: "btn btn-primary" do%>
+            <i class="glyphicon glyphicon-edit"></i> Editar
+          <% end %>
+        </td>
+        <td>
+          <%= link_to invoice_path(invoice), class: "btn btn-primary" do %>
+            <i class="glyphicon glyphicon-eye-open"></i> Detalle
+          <% end %>
+        </td>
+        <td>
+            <%= link_to invoice_path(invoice), class: "btn btn-danger", method: :delete,data: { confirm: 'Estas seguro de eliminar?' } do %>
+              <i class="glyphicon glyphicon-trash"></i> Borrar
+            <% end %>
+        </td>
+        <td class="btn btn-info"><%= link_to 'PDF', invoice_path(invoice, format: :pdf) %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

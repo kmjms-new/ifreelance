@@ -1,0 +1,32 @@
+<% content_for :subtitulo do %>
+  Factura: <%= @invoice.number %>
+<% end %>
+
+Fecha de Creado: <%= @invoice.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Numero</th>
+    <th>Fecha Creada</th>
+    <th>Fecha Limite</th>
+    <th>Nombre Cliente</th>
+    <th>Valor Total</th>
+    <th>Estado</th>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @invoice.number %> </td>
+        <td> <%= @invoice.date_invoice %></td>
+        <td> <%= @invoice.end_date %> </td>
+        <td> <%= @invoice.name_client %> </td>
+        <td> <%= @invoice.total_value %> </td>
+        <td> <%= @invoice.state %> </td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

@@ -1,0 +1,42 @@
+<% content_for :subtitulo do %>
+  Crear Cliente
+<% end %>
+
+<div class="col-md-6 well">
+  <%= form_for(@client) do |f| %>
+
+  <% if @client.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><center>!Error al crear el Cliente!</center></h2>
+
+      <ul>
+      <% @client.errors.each_with_index do |msg| %>
+        <li><%= msg[1] %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label :name, class: "control-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label :email, class: "control-label" %>
+    <%= f.text_field :email, class: "form-control" %>
+
+    <%= f.label :phone, class: "control-label" %>
+    <%= f.text_field :phone, class: "form-control" %>
+
+    <%= f.label :total_payment, class: "control-label" %>
+    <%= f.text_field :total_payment, class: "form-control" %>
+    <br><br>
+
+    <%= button_tag( :class => "btn btn-success") do %>
+      <i class="glyphicon glyphicon-floppy-disk"></i> Guardar
+    <% end %>
+    <%= link_to clients_path, class:"btn btn-primary" do%>
+    <i class="glyphicon glyphicon-repeat"></i> Regresar
+    <% end %>
+
+
+  <% end %>
+</div>

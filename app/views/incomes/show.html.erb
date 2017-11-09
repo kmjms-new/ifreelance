@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @income.amount %>
+</p>
+
+<p>
+  <strong>Clasification:</strong>
+  <%= @income.clasification %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @income.info %>
+</p>
+
+<p>
+  <strong>Name client:</strong>
+  <%= @income.name_client %>
+</p>
+
+<p>
+  <strong>Name project:</strong>
+  <%= @income.name_project %>
+</p>
+
+<p>
+  <strong>Developer:</strong>
+  <%= @income.developer %>
+</p>
+
+<%= link_to 'Edit', edit_income_path(@income) %> |
+<%= link_to 'Back', incomes_path %>

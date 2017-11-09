@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left" style="padding-top: 7.5px;"><strong>Proyectos mas Solicitados</strong></h3>
+      <div class="btn-group  pull-right">
+        <button type="button" class="btn btn-default" id="total">Total</button>
+        <button type="button" class="btn btn-default" id="porcentaje">Porcentaje</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div id="demanda_project">
+        <%= render partial: "chart_bar_demanda"%>
+      </div>
+      <div id="demanda_articulo_pie">
+        <%= render partial: "chart_pie_demanda"%>
+      </div>
+    </div>
+  </div>
+</div>
