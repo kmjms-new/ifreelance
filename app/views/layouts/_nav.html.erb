@@ -9,7 +9,7 @@
       <%= link_to 'IFreelance', root_path, class: 'navbar-brand' %>
   </div>
   <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
-    Bienvenido:&nbsp; <strong> <%= current_user.email %> </strong>&nbsp;
+    <strong> <%= current_user.role %> </strong> Bienvenido:&nbsp; <strong> <%= current_user.email %> </strong>&nbsp;
     <%= link_to destroy_user_session_path, class: "btn btn-danger square-btn-adjust", method: :delete  do%>
       <i class="glyphicon glyphicon-off"></i> Cerrar Sesión
     <% end %>

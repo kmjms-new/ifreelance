@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022212602) do
+ActiveRecord::Schema.define(version: 20171109192340) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(version: 20171022212602) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "hub_files", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "myfile"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "incomes", force: :cascade do |t|
     t.float "amount"
     t.string "clasification"
@@ -71,6 +79,14 @@ ActiveRecord::Schema.define(version: 20171022212602) do
     t.datetime "updated_at", null: false
     t.integer "client_id"
     t.index ["client_id"], name: "index_invoices_on_client_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
@@ -129,6 +145,7 @@ ActiveRecord::Schema.define(version: 20171022212602) do
     t.string "uid"
     t.string "name"
     t.text "image"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

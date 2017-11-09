@@ -1,0 +1,8 @@
+<%= link_to 'All posts', hub_path %>
+<h1><%= @hub.name %></h1>
+ 
+<%= image_tag(@hub.myfile.url, alt: 'Image') if @hub.myfile? %>
+ 
+<p><%= @hub.description %></p>
+ 
+<p><%= link_to 'Edit', edit_hub_path(@hub) %></p>

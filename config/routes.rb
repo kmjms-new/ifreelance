@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts
+  
+  
+  resources :hubfiles
+
   get 'admin/index'
 
   root 'static_pages#home'
