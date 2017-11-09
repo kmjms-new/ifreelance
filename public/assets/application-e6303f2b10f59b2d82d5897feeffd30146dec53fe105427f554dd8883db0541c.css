@@ -1,0 +1,672 @@
+/*=============================================================
+    Authour URI: www.binarycart.com
+    License: Commons Attribution 3.0
+
+    http://creativecommons.org/licenses/by/3.0/
+
+    100% To use For Personal And Commercial Use.
+    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
+
+    ========================================================  */
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-green {
+  border-color: #5cb85c;
+}
+
+/* line 18, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-green .panel-heading {
+  border-color: #5cb85c;
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+/* line 24, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-green a {
+  color: #5cb85c;
+}
+
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-green a:hover {
+  color: #3d8b3d;
+}
+
+/* line 32, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-red {
+  border-color: #d9534f;
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-red .panel-heading {
+  border-color: #d9534f;
+  color: #fff;
+  background-color: #d9534f;
+}
+
+/* line 42, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-red a {
+  color: #d9534f;
+}
+
+/* line 46, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-red a:hover {
+  color: #b52b27;
+}
+
+/* line 50, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-yellow {
+  border-color: #f0ad4e;
+}
+
+/* line 54, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-yellow .panel-heading {
+  border-color: #f0ad4e;
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+/* line 60, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-yellow a {
+  color: #f0ad4e;
+}
+
+/* line 64, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-yellow a:hover {
+  color: #df8a13;
+}
+
+/* line 68, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.huge {
+  font-size: 40px;
+}
+
+/*==============================================
+    GENERAL  STYLES
+    =============================================*/
+/* line 77, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+table {
+  width: 50%;
+}
+
+/* line 81, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.header-table th {
+  height: 35px;
+  border: 1px solid gray;
+}
+
+/* line 86, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.glyphicon3x {
+  font-size: 30px;
+}
+
+/* line 90, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.glyphicon5x {
+  font-size: 50px;
+}
+
+/* line 94, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+#wrapper {
+  width: 100%;
+  background: #202020;
+}
+
+/* line 99, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+#page-wrapper {
+  padding: 15px 15px;
+  min-height: 600px;
+  background: #F3F3F3;
+}
+
+/* line 106, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+#page-inner {
+  width: 100%;
+  margin: 10px 20px 10px 0px;
+  background-color: #fff !important;
+  padding: 10px;
+  min-height: 1200px;
+}
+
+/* line 114, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 118, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.no-boder {
+  border: 1px solid #f3f3f3;
+}
+
+/* line 122, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+h2 {
+  color: #f00;
+}
+
+/* line 126, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+h4 {
+  padding-top: 10px;
+}
+
+/* line 130, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.square-btn-adjust {
+  border: 0px solid transparent;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 137, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+p {
+  font-size: 16px;
+  line-height: 25px;
+  padding-top: 20px;
+}
+
+/*==============================================
+   DASHBOARD STYLES
+    =============================================*/
+/* line 146, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.panel-back {
+  background-color: #F8F8F8;
+}
+
+/* line 150, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.noti-box {
+  min-height: 100px;
+  padding: 20px;
+}
+
+/* line 155, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.noti-box .icon-box {
+  display: block;
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 70px;
+  height: 70px;
+  line-height: 75px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* line 167, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.text-box p {
+  margin: 0 0 3px;
+}
+
+/* line 171, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.main-text {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* line 175, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.set-icon {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/* line 181, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.bg-color-green {
+  background-color: #00CE6F;
+  color: #fff;
+}
+
+/* line 186, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.bg-color-blue {
+  background-color: #A95DF0;
+  color: #fff;
+}
+
+/* line 191, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.bg-color-red {
+  background-color: #DB0630;
+  color: #fff;
+}
+
+/* line 196, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.bg-color-brown {
+  background-color: #B94A00;
+  color: #fff;
+}
+
+/* line 201, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.icon-box-right {
+  display: block;
+  float: right;
+  margin: 0 15px 10px 0;
+  width: 70px;
+  height: 70px;
+  line-height: 75px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* line 213, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.main-temp-back {
+  background: #8702A8;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* line 221, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.main-temp-back .text-temp {
+  font-size: 40px;
+}
+
+/* line 225, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.back-dash {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #2EA7EB;
+  color: #fff;
+}
+
+/* line 236, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.back-dash p {
+  padding-top: 16px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 25px;
+  text-align: justify;
+}
+
+/* line 244, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.back-footer-green {
+  background-color: #009B50;
+  border-top: 0px solid #fff;
+}
+
+/* line 249, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.back-footer-red {
+  background-color: #AF0000;
+  border-top: 0px solid #fff;
+}
+
+/* line 254, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.color-bottom-txt {
+  color: #000;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/*CHAT PANEL*/
+/* line 261, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-panel .panel-body {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+/* line 266, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-box {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 272, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-box li {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #808080;
+}
+
+/* line 278, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-box li.left .chat-body {
+  margin-left: 90px;
+}
+
+/* line 282, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-box li .chat-body p {
+  margin: 0;
+  color: #8d8888;
+}
+
+/* line 287, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.chat-img > img {
+  margin-left: 20px;
+}
+
+/*==============================================
+    MENU STYLES
+    =============================================*/
+/* line 295, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.user-image {
+  margin: 25px auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  max-height: 120px;
+  max-width: 120px;
+}
+
+/* line 304, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-cls-top .navbar-brand {
+  color: #fff;
+  background: #C90000;
+  width: 260px;
+  text-align: center;
+  height: 60px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* line 314, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.active-menu {
+  background-color: #C90000 !important;
+}
+
+/* line 318, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.arrow {
+  float: right;
+}
+
+/* line 322, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.fa.arrow:before {
+  content: "\f104";
+}
+
+/* line 326, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
+/* line 330, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-second-level li,
+.nav-third-level li {
+  border-bottom: none !important;
+}
+
+/* line 335, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-second-level li a {
+  padding-left: 37px;
+}
+
+/* line 339, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-third-level li a {
+  padding-left: 55px;
+}
+
+/* line 342, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse, .sidebar-collapse .nav {
+  background: none;
+}
+
+/* line 345, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse .nav {
+  padding: 0;
+}
+
+/* line 348, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse .nav > li > a {
+  color: #fff;
+  background: #202020;
+  text-shadow: none;
+}
+
+/* line 354, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse > .nav > li > a {
+  padding: 15px 10px;
+}
+
+/* line 358, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse > .nav > li {
+  border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+
+/* line 362, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+  background: #0A0A0A;
+  outline: 0;
+}
+
+/* line 368, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-second-level > li > a:before,
+.nav-third-level > li > a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  width: 15px;
+  height: 1px;
+  background: #ff0000;
+  top: 20px;
+}
+
+/* line 380, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-second-level > li > a:after,
+.nav-third-level > li > a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  width: 1px;
+  height: 100%;
+  background: #ff0000;
+  top: 0px;
+  z-index: 10;
+}
+
+/* line 393, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-second-level > li:last-child > a:after,
+.nav-third-level > li:last-child > a:after {
+  height: 50%;
+}
+
+/* line 398, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before {
+  left: 40px;
+}
+
+/* line 403, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-side {
+  border: none;
+  background-color: #202020;
+}
+
+/* line 408, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-cls-top {
+  background: #4D4D4D;
+  border-bottom: none;
+}
+
+/* line 414, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-cls-top .navbar-brand:hover {
+  background: #C90000;
+  color: #fff;
+}
+
+/* line 419, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-default {
+  border: 0px solid black;
+}
+
+/* line 423, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-header {
+  background: #A70303;
+}
+
+/* line 427, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #B40101;
+}
+
+/* line 431, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+
+/* line 435, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+/* line 439, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.nav > li > a > i {
+  margin-right: 10px;
+}
+
+/*==============================================
+    UI ELEMENTS STYLES
+    =============================================*/
+/* line 446, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  padding: 6px 0;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+}
+
+/*==============================================
+    MEDIA QUERIES
+    =============================================*/
+@media (min-width: 768px) {
+  /* line 463, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+  #page-wrapper {
+    margin: 0 0 0 260px;
+    padding: 15px 30px;
+    min-height: 1200px;
+  }
+
+  /* line 469, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+  .navbar-side {
+    z-index: 1;
+    position: absolute;
+    width: 260px;
+  }
+
+  /* line 475, /home/ubuntu/workspace/app/assets/stylesheets/custom.scss */
+  .navbar {
+    border-radius: 0px;
+  }
+}
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /home/ubuntu/workspace/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  @import "custom";
+  
+  
+  input{
+    color: #000!important;
+  }
