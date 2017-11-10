@@ -1,0 +1,24 @@
+<% content_for :subtitulo do %>
+  Tipo Proyecto: <%= @type_project.name_type %>
+<% end %>
+
+Fecha de Creado: <%= @type_project.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Nombre</th>
+
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @type_project.name_type %> </td>
+        
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

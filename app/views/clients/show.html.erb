@@ -1,0 +1,28 @@
+<% content_for :subtitulo do %>
+  Cliente: <%= @client.name %>
+<% end %>
+
+Fecha de Creado: <%= @client.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Telefono</th>
+    <th>Pago Total</th>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @client.name %> </td>
+        <td> <%= @client.email %></td>
+        <td> <%= @client.phone %> </td>
+        <td> <%= @client.total_payment %> </td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

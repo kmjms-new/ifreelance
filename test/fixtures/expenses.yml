@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1.5
+  process: MyString
+  date_expenses: 2017-10-21
+  category: MyString
+  state: MyString
+  vinculation: false
+
+two:
+  quantity: 1.5
+  process: MyString
+  date_expenses: 2017-10-21
+  category: MyString
+  state: MyString
+  vinculation: false

@@ -1,0 +1,57 @@
+<% content_for :subtitulo do %>
+  Crear Proyecto
+<% end %>
+
+<div class="col-md-6 well">
+  <%= form_for(@project) do |f| %>
+
+  <% if @project.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><center>!Error al crear el Proyecto!</center></h2>
+
+      <ul>
+      <% @project.errors.each_with_index do |msg| %>
+        <li><%= msg[1] %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label :name_project, class: "control-label" %>
+    <%= f.text_field :name_project, class: "form-control" %>
+
+    <%= f.label :description, class: "control-label" %>
+    <%= f.text_field :description, class: "form-control" %>
+
+    <%= f.label :star_date, class: "control-label" %>
+    <%= f.text_field :star_date, class: "form-control" %>
+
+    <%= f.label :end_date, class: "control-label" %>
+    <%= f.text_field :end_date, class: "form-control" %>
+
+    <%= f.label :name_client, class: "control-label" %>
+    <%= f.text_field :name_client, class: "form-control" %>
+
+    <%= f.label :state_project, class: "control-label" %>
+    <%= f.text_field :state_project, class: "form-control" %>
+
+    <%= f.label :price, class: "control-label" %>
+    <%= f.text_field :price, class: "form-control" %>
+
+    <%= f.label :progress, class: "control-label" %>
+    <%= f.text_field :progress, class: "form-control" %>
+
+    <%= f.label :type_project, class: "control-label" %><br>
+    <%= f.collection_select(:type_project_id, TypeProject.all, :id, :name_type, prompt: "Seleccione un tipo") %>
+    <br><br>
+
+    <%= button_tag( :class => "btn btn-success") do %>
+      <i class="glyphicon glyphicon-floppy-disk"></i> Guardar
+    <% end %>
+    <%= link_to projects_path, class:"btn btn-primary" do%>
+    <i class="glyphicon glyphicon-repeat"></i> Regresar
+    <% end %>
+
+
+  <% end %>
+</div>

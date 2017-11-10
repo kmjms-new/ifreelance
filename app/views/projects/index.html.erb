@@ -1,0 +1,55 @@
+<% content_for :subtitulo do %>
+  Proyectos
+<% end %>
+
+<%= link_to new_project_path, class: "btn btn-success"  do%>
+  <i class="glyphicon glyphicon-plus"></i> Crear Proyecto
+<% end %>
+
+<br>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Fecha Inicio</th>
+    <th>Fecha Fin</th>
+    <th>Nombre Cliente</th>
+    <th>Estado</th>
+    <th>Precio</th>
+    <th>Progreso</th>
+    <th>Opciones</th>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td> <%= project.name_project %> </td>
+        <td> <%= project.description %> </td>
+        <td> <%= project.star_date %> </td>
+        <td> <%= project.end_date %> </td>
+        <td> <%= project.name_client %> </td>
+        <td> <%= project.state_project %> </td>
+        <td> <%= project.price %> </td>
+        <td> <%= project.progress %> </td>
+        <td>
+          <%= link_to edit_project_path(project), class: "btn btn-primary" do%>
+            <i class="glyphicon glyphicon-edit"></i> Editar
+          <% end %>
+        </td>
+        <td>
+          <%= link_to project_path(project), class: "btn btn-primary" do %>
+            <i class="glyphicon glyphicon-eye-open"></i> Detalle
+          <% end %>
+        </td>
+        <td>
+            <%= link_to project_path(project), class: "btn btn-danger", method: :delete,data: { confirm: 'Estas seguro de eliminar?' } do %>
+              <i class="glyphicon glyphicon-trash"></i> Borrar
+            <% end %>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @projects %>

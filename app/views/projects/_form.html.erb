@@ -1,0 +1,56 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_project %>
+    <%= form.text_field :name_project, id: :project_name_project %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :star_date %>
+    <%= form.date_select :star_date, id: :project_star_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, id: :project_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_client %>
+    <%= form.text_field :name_client, id: :project_name_client %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state_project %>
+    <%= form.text_field :state_project, id: :project_state_project %>
+  </div>
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :project_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :progress %>
+    <%= form.text_field :progress, id: :project_progress %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<% content_for :subtitulo do %>
+  Freelance: <%= @freelance.name %>
+<% end %>
+
+Fecha de Creado: <%= @freelance.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Nombre</th>
+    <th>Correo</th>
+    <th>Cantidad Total</th>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @freelance.name %> </td>
+        <td> <%= @freelance.email %></td>
+        <td> <%= @freelance.total_amount %> </td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

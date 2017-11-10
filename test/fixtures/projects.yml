@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_project: MyString
+  description: MyText
+  star_date: 2017-10-21
+  end_date: 2017-10-21
+  name_client: MyString
+  state_project: MyString
+  type_project: MyString
+  price: 1.5
+  progress: 1.5
+
+two:
+  name_project: MyString
+  description: MyText
+  star_date: 2017-10-21
+  end_date: 2017-10-21
+  name_client: MyString
+  state_project: MyString
+  type_project: MyString
+  price: 1.5
+  progress: 1.5

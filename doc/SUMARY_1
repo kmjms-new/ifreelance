@@ -1,0 +1,8 @@
+lISTA DE FEATURES
+* Implementacion de login de Admin realizando las respectivas validaciones de ingreso.
+* Implementacion de el respectivo registro del admin validado por correo electronico.
+* implementacion de pagina principal de la aplicacion.
+
+POSIBLES FEATURES A IMPLEMENTAR
+* registro de empleados y clientes asi como la edicion de estos registros.
+* permitir hacer consultas de compañias registradas.

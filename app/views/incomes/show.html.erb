@@ -1,0 +1,32 @@
+<% content_for :subtitulo do %>
+  Ingreso: <%= @income.amount %>
+<% end %>
+
+Fecha de Creado: <%= @income.created_at %>
+<hr>
+
+<table class="table table-bordered">
+  <thead>
+    <th>Cantidad</th>
+    <th>Clasificacion</th>
+    <th>Informacion</th>
+    <th>Nombre Cliente</th>
+    <th>Nombre Proyecto</th>
+    <th>Desarrollador</th>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td> <%= @income.amount %> </td>
+        <td> <%= @income.clasification %></td>
+        <td> <%= @income.info %> </td>
+        <td> <%= @income.name_client %> </td>
+        <td> <%= @income.name_project %> </td>
+        <td> <%= @income.developer %> </td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>

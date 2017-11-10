@@ -1,0 +1,45 @@
+<% content_for :subtitulo do %>
+  Editar Ingreso
+<% end %>
+
+<div class="col-md-6 well">
+  <%= form_for :income, url: income_path(@income), method: :patch do |f| %>
+
+  <% if @income.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><center>!Error al actualizar!</center></h2>
+
+      <ul>
+      <% @income.errors.each_with_index do |msg| %>
+        <li><%= msg[1] %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :amount, class: "control-label" %>
+   <%= f.text_field :amount, class: "form-control" %>
+
+   <%= f.label :clasification, class: "control-label" %>
+   <%= f.text_field :clasification, class: "form-control" %>
+
+   <%= f.label :info, class: "control-label" %>
+   <%= f.text_field :info, class: "form-control" %>
+
+   <%= f.label :name_client, class: "control-label" %>
+   <%= f.text_field :name_client, class: "form-control" %>
+
+   <%= f.label :name_project, class: "control-label" %>
+   <%= f.text_field :name_project, class: "form-control" %>
+
+   <%= f.label :developer, class: "control-label" %>
+   <%= f.text_field :developer, class: "form-control" %>
+ <br>
+    <%= button_tag( :class => "btn btn-success") do %>
+     <i class="glyphicon glyphicon-floppy-disk"></i> Guardar
+    <% end %>
+    <%= link_to income_path, class:"btn btn-primary" do%>
+    <i class="glyphicon glyphicon-repeat"></i> Regresar
+    <% end %>
+  <% end %>
+</div>

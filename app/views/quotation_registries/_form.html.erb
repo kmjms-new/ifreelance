@@ -1,0 +1,52 @@
+<%= form_with(model: quotation_registry, local: true) do |form| %>
+  <% if quotation_registry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quotation_registry.errors.count, "error") %> prohibited this quotation_registry from being saved:</h2>
+
+      <ul>
+      <% quotation_registry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idquotationregistry %>
+    <%= form.number_field :idquotationregistry, id: :quotation_registry_idquotationregistry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, id: :quotation_registry_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nameclient %>
+    <%= form.text_field :nameclient, id: :quotation_registry_nameclient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :business %>
+    <%= form.text_field :business, id: :quotation_registry_business %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product, id: :quotation_registry_product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value, id: :quotation_registry_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :validity %>
+    <%= form.number_field :validity, id: :quotation_registry_validity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
