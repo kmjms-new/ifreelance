@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'client_home/index'
+
   resources :posts
   
   

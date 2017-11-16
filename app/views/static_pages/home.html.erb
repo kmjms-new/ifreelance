@@ -15,7 +15,16 @@
                             
                                 <% if user_signed_in? %>
                                 <li><a class="page-scroll"> <%= current_user.email  %></a></li>
-                                <li><a class="page-scroll" href="/admin">Panel de Control</a></li>
+                                
+                                                              
+    <% if current_user.role =="Freelance" %>
+      <li><a class="page-scroll" href="/admin">Panel de Control</a></li>
+    <% end %>
+    <% if current_user.role =="Client" %>
+      <!--<li><a class="page-scroll" href="/admin">Panel de Control</a></li>-->
+      <li><%= link_to "Panel De Control Cliente", client_home_index_path %></li>
+    <% end %>  
+      
                                      <% else %>
                                      <li><%= link_to "login", new_user_session_path %></li>
                                      <% end %>
