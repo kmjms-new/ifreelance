@@ -1,4 +1,5 @@
 class QuotationRegistriesController < ApplicationController
+  before_action :authenticate_user!
   layout "dashboard"
   before_action :set_quotation_registry, only: [:show, :edit, :update, :destroy]
 

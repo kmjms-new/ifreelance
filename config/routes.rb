@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  match '/users',   to: 'users#index',   via: 'get'
+  #resources :users, :only =>[:show]
+  resources :users
+  #match '/users/:id',     to: 'users#show',       via: 'get'
+  #match '/users/:id',     to: 'users#show',       via: 'get'
   get 'client_home/index'
 
   resources :posts
@@ -10,7 +15,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get 'admin' => 'admin#index'
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  devise_for :users, :path_prefix => 'ifreelanceapp', :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", sessions: 'users/sessions' }
   resources :state_projects
   resources :type_projects
   resources :incomes

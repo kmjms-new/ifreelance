@@ -1,5 +1,6 @@
 class IncomesController < ApplicationController
   layout "dashboard"
+  before_action :authenticate_user!
   before_action :set_income, only: [:show, :edit, :update, :destroy]
 
   # GET /incomes

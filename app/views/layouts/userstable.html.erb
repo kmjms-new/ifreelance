@@ -20,8 +20,10 @@
           <td><%= user.role %></td>
           <td><%= user.created_at %></td>
           <td><%= user.updated_at %></td>
-          <td><%= link_to 'Show', user %></td>
+          <td><%= link_to 'Ver', user %></td>
+          <td><%= link_to 'Editar', edit_user_path(user) %></td>
           </tr>
         <% end %>
     </tbody>
 </table>
+Atrás (Pendiente)

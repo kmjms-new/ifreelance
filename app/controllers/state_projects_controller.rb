@@ -1,4 +1,5 @@
 class StateProjectsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_state_project, only: [:show, :edit, :update, :destroy]
 
   # GET /state_projects

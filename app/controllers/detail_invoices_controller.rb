@@ -1,4 +1,5 @@
 class DetailInvoicesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_detail_invoice, only: [:show, :edit, :update, :destroy]
 
   # GET /detail_invoices

@@ -1,4 +1,5 @@
 class HubController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_hub, only: [:show, :edit, :update]
  
   def index
