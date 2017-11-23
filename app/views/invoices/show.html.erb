@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Design view:</strong>
+  <%= @invoice.design_view %>
+</p>
+
+<p>
+  <strong>Programming front:</strong>
+  <%= @invoice.programming_front %>
+</p>
+
+<p>
+  <strong>Design date base:</strong>
+  <%= @invoice.design_date_base %>
+</p>
+
+<p>
+  <strong>Programming back:</strong>
+  <%= @invoice.programming_back %>
+</p>
+
+<p>
+  <strong>Banner:</strong>
+  <%= @invoice.banner %>
+</p>
+
+<p>
+  <strong>Advertising:</strong>
+  <%= @invoice.advertising %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

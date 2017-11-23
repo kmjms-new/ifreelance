@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  freelance_name: MyString
+  freelance_phone: MyString
+  freelance_email: MyString
+  freelance_sex: MyString
+  freelance_address: MyText
+  freelance_salary: 1
+  freelance_delete: 1
+
+two:
+  freelance_name: MyString
+  freelance_phone: MyString
+  freelance_email: MyString
+  freelance_sex: MyString
+  freelance_address: MyText
+  freelance_salary: 1
+  freelance_delete: 1

@@ -1,0 +1,149 @@
+
+                <% content_for :title, "Print Project" %>
+
+
+                <!-- Page Header -->
+                <!-- You can use the .hidden-print class to hide an element in printing -->
+                <div class="content bg-gray-lighter hidden-print">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading animated zoomIn">
+                                Factura <small>Print Factura.</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Generic</li>
+                                <li><a class="link-effect" href="">Factura</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content content-boxed">
+                    <!-- Invoice -->
+                    <div class="block">
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                                </li>
+                                <li>
+                                    <!-- Print Page functionality is initialized in App() -> uiHelperPrint() -->
+                                    <button type="button" onclick="App.initHelper('print-page');"><i class="si si-printer"></i> Print Factura</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block-content block-content-narrow">
+                            <!-- Company Info -->
+                            <div class="row">
+                                <!-- Company Info -->
+                                <div class="col-xs-6">
+                                    <p class="h2 font-w400 push-5" style="margin-bottom: 20px !important">
+                                        <%= image_tag 'logo-min.png' %> IFREELANCE
+                                    </p>
+                                </div>
+                                <div class="col-xs-6 pull-right text-right">
+                                    <div class="h3 pull-right" style="margin-top: 10px !important">
+                                        FACTURA
+                                        <h5>#INV-<%= @project.id %></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Invoice Info -->
+                            <hr style="margin-top: 0px;">
+                            <div class="row items-push-2x">
+                                <!-- Company Info -->
+                                <div class="col-xs-6 col-sm-4 col-lg-3">
+                                    <p class="h5 push-5"><b>Informacion Cliente</b></p>
+                                    <h5><%= @project.client.client_name %></h5>
+                                    <address>
+                                        <%= @project.client.client_address %><br>
+                                        <i class="si si-call-end"></i> <%= @project.client.client_phone %>
+                                    </address>
+                                </div>
+                                <!-- END Company Info -->
+
+                                <!-- Client Info -->
+                                <div class="col-xs-6 col-sm-4 col-sm-offset-4 col-lg-3 col-lg-offset-6 text-right">
+                                    <p class="h5 push-5"><b>Fecha</b><br> <%= DateTime.now.to_date %></p>
+                                    <p class="h5 push-5"><b>Delivery Date</b><br> <%= @project.delivery_date%></p>
+                                </div>
+                                <!-- END Client Info -->
+                            </div>
+                            <!-- END Invoice Info -->
+
+                            <!-- Table -->
+                            <div class="table-responsive push-50">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" style="width: 50px;"></th>
+                                            <th>Descripcion</th>
+                                            <th class="text-right" style="width: 120px;">Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>
+                                                <p class="font-w600 push-10"><%= @project.project_details %></p>
+                                                <div class="text-muted">
+                                                    <% if @project.invoice.design_view != '0' %>
+                                                        <span class="font-w600">Diseño Front :</span> <%= @project.invoice.design_view %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.programming_front != '0' %>
+                                                        <span class="font-w600">Programar Front :</span> <%= @project.invoice.programming_front %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.design_date_base != '0' %>
+                                                        <span class="font-w600">Diseño Base de Datos :</span> <%= @project.invoice.design_date_base %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.programming_back != '0' %>
+                                                        <span class="font-w600">Programar Back :</span> <%= @project.invoice.programming_back %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.banner != '0' %>
+                                                        <span class="font-w600">Banner :</span> <%= @project.invoice.banner %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.advertising != '0' %>
+                                                        <span class="font-w600">Publicar :</span> <%= @project.invoice.advertising %>,
+                                                    <% end %>
+                                                    <% if @project.invoice.other != '0' %>
+                                                        <span class="font-w600">Otros :</span> <%= @project.invoice.other %>,
+                                                    <% end %>
+
+                                                </div>
+                                            </td>
+                                            <td class="text-right">$ <%= @project.project_amount %></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="font-w600 text-right">IVA</td>
+                                            <td class="text-right">19%</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="font-w600 text-right">Subtotal</td>
+                                            <td class="text-right">$ <%= @project.project_amount %></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="font-w600 text-right">Pagado</td>
+                                            <td class="text-right">$ <%= @project.project_paid %></td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td colspan="2" class="font-w700 text-uppercase text-right">Total Adeudado</td>
+                                            <td class="font-w700 text-right">$ <%= @project.project_amount - @project.project_paid %></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- END Table -->
+
+                            <!-- Footer -->
+                            <hr class="hidden-print">
+                            <p class="text-muted text-center"><small>Gracias Por Usar Nuestros Servicios!</small></p>
+                            <!-- END Footer -->
+                        </div>
+                    </div>
+                    <!-- END Invoice -->
+                </div>
+                <!-- END Page Content -->

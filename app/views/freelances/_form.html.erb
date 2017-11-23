@@ -1,0 +1,52 @@
+<%= form_with(model: freelance, local: true) do |form| %>
+  <% if freelance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(freelance.errors.count, "error") %> prohibited this freelance from being saved:</h2>
+
+      <ul>
+      <% freelance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :freelance_name %>
+    <%= form.text_field :freelance_name, id: :freelance_freelance_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_phone %>
+    <%= form.text_field :freelance_phone, id: :freelance_freelance_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_email %>
+    <%= form.text_field :freelance_email, id: :freelance_freelance_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_sex %>
+    <%= form.text_field :freelance_sex, id: :freelance_freelance_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_address %>
+    <%= form.text_area :freelance_address, id: :freelance_freelance_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_salary %>
+    <%= form.number_field :freelance_salary, id: :freelance_freelance_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :freelance_delete %>
+    <%= form.number_field :freelance_delete, id: :freelance_freelance_delete %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

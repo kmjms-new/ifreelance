@@ -1,0 +1,127 @@
+<% content_for :title, "Add Measurement" %>
+
+
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading animated zoomIn">
+                                Agregar Factura <small>Agregar Factura Data.</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Inicio</li>
+                                <li><a class="link-effect" href="">Agregar Proyecto</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="block">
+                                <div class="block-header">
+                                    <ul class="block-options">
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"><i class="si si-size-fullscreen"></i></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" data-toggle="block-option" data-action="content_toggle"><i class="si si-arrow-up"></i></button>
+                                        </li>
+                                    </ul>
+                                    <h3 class="block-title">Invoice Form <small>Invoice by Inch</small></h3>
+                                </div>
+                                <div class="block-content block-content-narrow">
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <%= form_for @invoice, :html=>{:class=>'form-horizontal push-10-t'} do|f| %>
+                                            	<p class="title text-primary font-w600">Front End :</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Diseñar Vista</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :design_view, :class=>'form-control', :placeholder=>"Enter Diseño", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Programar Front</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :programming_front, :class=>'form-control', :placeholder=>"Enter Front", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                </div>
+                                                <p class="title text-primary font-w600">Back End :</p>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Diseñar Base de Datos</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :design_date_base, :class=>'form-control', :placeholder=>"Enter data base", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Programar Back</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :programming_back, :class=>'form-control', :placeholder=>"Enter back ", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="title text-primary font-w600">Publicidad :</p>
+                                                <div class="row">
+                                                	<div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Banner</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :banner, :class=>'form-control', :placeholder=>"Enter Thigh", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Publicar</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_field :advertising, :class=>'form-control', :placeholder=>"Enter publicar ", :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="col-xs-12" for="example-password-input">Otros</label>
+                                                            <div class="col-sm-12">
+                                                                <%= f.text_area:other, :class=>'form-control', :placeholder=>"Enter Other cobros ",:rows=>'1', :required=>''  %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <%= f.submit :class=>'btn btn-sm btn-primary', :value=>'submit' %>
+                                                    </div>
+                                                </div>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

@@ -1,0 +1,97 @@
+
+                <% content_for :title, "Orders" %>
+
+
+                <!-- Page Header -->
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading animated zoomIn">
+                                Proyecto <small>Todos los Proyectos Data.</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Inicio</li>
+                                <li><a class="link-effect" href="">Proyecto</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content">
+                    <!-- Dynamic Table Simple -->
+                    <div class="block">
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"><i class="si si-size-fullscreen"></i></button>
+                                </li>
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="content_toggle"><i class="si si-arrow-up"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">Proyecto <small>Records</small></h3>
+                        </div>
+                        <div class="block-content table-responsive">
+                            <table class="table table-striped js-dataTable-full-pagination">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre Proyecto</th>
+                                        <th>Telefono</th>
+                                        <th>Direccion</th>
+                                        <th>Assignado a</th>
+                                        <th>Cantidad</th>
+                                        <th>Debe</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th class="text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <% @projects.each do |order|  %>
+                                    <tr>
+                                        <td>O-<%= project.id %></td>
+                                        <td data-toggle="popover" title="Details" data-content="<%= project.project_details %>" data-placement="top"><%= project.client.client_name %></td>
+                                        <td><%= project.client.client_phone %></td>
+                                        <td><%= project.customer.client_address %></td>
+                                        <td><%= project.freelance.freelance_name %></td>
+                                        <td data-toggle="popover" title="Paid" data-content="<%= project.project_paid %>" data-placement="top"><%= project.project_amount %></td>
+                                        <td><%= project.project_amount - project.project_paid %></td>
+                                        <td><%= project.delivery_date %></td>
+                                        <% if project.project_status == 'Confirm'  %>
+                                            <td class="text-center"><span class="label label-default"> <%= project.project_status %></span></td>
+                                        <% elsif project.project_status == 'Processing' %>
+                                            <td class="text-center"><span class="label label-warning"> <%= project.project_status %></span></td>
+                                        <% elsif project.project_status == 'Ready' %>
+                                            <td class="text-center"><span class="label label-success"> <%= project.project_status %></span></td>
+                                        <% elsif project.project_status == 'Delivered' %>
+                                            <td class="text-center"><span class="label label-primary"> <%= project.project_status %></span></td>
+                                        <% end %>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <%= link_to edit_invoice_path(project.id), :class=>'btn btn-xs btn-default' do %>
+                                                    <i class="fa fa-plus"></i>
+                                                <% end %>
+                                                <%= link_to project_path(project.id), :class=>'btn btn-xs btn-default' do %>
+                                                    <i class="fa fa-print"></i>
+                                                <% end %>
+                                                <%= link_to edit_project_path(project.id), :class=>'btn btn-xs btn-default' do %>
+                                                    <i class="fa fa-pencil"></i>
+                                                <% end %>
+                                                <%= link_to project_path(project.id), :class=>'btn btn-xs btn-default', method: :delete, data: {confirm: 'Are you sure?'} do %>
+                                                    <i class="fa fa-trash-o"></i>
+                                                <% end %>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                  <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Content -->

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: one
+  freelance: one
+  delivery_date: 2017-11-22
+  project_amount: 1
+  project_paid: 1
+  project_status: MyString
+  project_details: MyText
+  project_delete: 1
+
+two:
+  client: two
+  freelance: two
+  delivery_date: 2017-11-22
+  project_amount: 1
+  project_paid: 1
+  project_status: MyString
+  project_details: MyText
+  project_delete: 1
