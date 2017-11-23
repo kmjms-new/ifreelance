@@ -1,0 +1,57 @@
+<%= form_with(model: sent_email, local: true) do |form| %>
+  <% if sent_email.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sent_email.errors.count, "error") %> prohibited this sent_email from being saved:</h2>
+
+      <ul>
+      <% sent_email.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :sent_email_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sender %>
+    <%= form.text_field :sender, id: :sent_email_sender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recipient %>
+    <%= form.text_field :recipient, id: :sent_email_recipient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :sent_email_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :sent_email_subject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :sent_email_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notification_id %>
+    <%= form.number_field :notification_id, id: :sent_email_notification_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notification_type %>
+    <%= form.text_field :notification_type, id: :sent_email_notification_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

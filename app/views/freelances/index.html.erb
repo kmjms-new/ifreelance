@@ -1,5 +1,5 @@
 
-                <% content_for :title, "Freelance" %>
+                <% content_for :title, "Staffs" %>
 
 
   				<!-- Page Header -->
@@ -7,7 +7,7 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading animated zoomIn">
-                                Freelance <small>All Freelance </small>
+                                Freelance <small>All Freelance Data.</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
@@ -42,12 +42,12 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Nombre</th>
-                  									    <th>Telefono</th>
-                  									    <th>Correo</th>
-                  									    <th>Sexo</th>
-                  									    <th>Direccion</th>
-                  									    <th>Salario</th>
-                  									    <th class="text-center">Acciones</th>
+									    <th>Telefono</th>
+									    <th>Correo</th>
+									    <th>Sexo</th>
+									    <th>Direccion</th>
+									    <th>Salario</th>
+									    <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -55,11 +55,11 @@
                                     <tr>
                                         <td>S-<%= freelance.id %></td>
                                         <td><%= freelance.freelance_name %></td>
-                								        <td><%= freelance.freelance_phone %></td>
-                								        <td><%= freelance.freelance_email %></td>
-                								        <td><%= freelance.freelance_sex %></td>
-                								        <td><%= freelance.freelance_address %></td>
-                								        <td><%= freelance.freelance_salary %></td>
+								        <td><%= freelance.freelance_phone %></td>
+								        <td><%= freelance.freelance_email %></td>
+								        <td><%= freelance.freelance_sex %></td>
+								        <td><%= freelance.freelance_address %></td>
+								        <td><%= freelance.freelance_salary %></td>
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <%= link_to freelance_path(freelance.id), :class=>'btn btn-xs btn-default' do %>

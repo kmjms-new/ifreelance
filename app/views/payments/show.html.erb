@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @payment.invoice %>
+</p>
+
+<p>
+  <strong>Payment amount:</strong>
+  <%= @payment.payment_amount %>
+</p>
+
+<p>
+  <strong>Payment type:</strong>
+  <%= @payment.payment_type %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @payment.payment_method %>
+</p>
+
+<p>
+  <strong>Payment date:</strong>
+  <%= @payment.payment_date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @payment.notes %>
+</p>
+
+<p>
+  <strong>Send payment notification:</strong>
+  <%= @payment.send_payment_notification %>
+</p>
+
+<p>
+  <strong>Paid full:</strong>
+  <%= @payment.paid_full %>
+</p>
+
+<p>
+  <strong>Archive number:</strong>
+  <%= @payment.archive_number %>
+</p>
+
+<p>
+  <strong>Credit applied:</strong>
+  <%= @payment.credit_applied %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @payment.status %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @payment.client %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

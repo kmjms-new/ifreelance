@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @credit_payment.amount %>
+</p>
+
+<p>
+  <strong>Payment:</strong>
+  <%= @credit_payment.payment %>
+</p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @credit_payment.invoice %>
+</p>
+
+<%= link_to 'Edit', edit_credit_payment_path(@credit_payment) %> |
+<%= link_to 'Back', credit_payments_path %>

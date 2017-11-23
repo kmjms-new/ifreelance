@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sent_email.date %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @sent_email.sender %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @sent_email.recipient %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @sent_email.type %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @sent_email.subject %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sent_email.content %>
+</p>
+
+<p>
+  <strong>Notification:</strong>
+  <%= @sent_email.notification_id %>
+</p>
+
+<p>
+  <strong>Notification type:</strong>
+  <%= @sent_email.notification_type %>
+</p>
+
+<%= link_to 'Edit', edit_sent_email_path(@sent_email) %> |
+<%= link_to 'Back', sent_emails_path %>

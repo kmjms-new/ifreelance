@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171123003707) do
+ActiveRecord::Schema.define(version: 20171123221557) do
 
   create_table "clients", force: :cascade do |t|
     t.string "client_name"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 20171123003707) do
     t.text "client_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "credit_payments", force: :cascade do |t|
+    t.decimal "amount"
+    t.integer "payment_id"
+    t.integer "invoice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["invoice_id"], name: "index_credit_payments_on_invoice_id"
+    t.index ["payment_id"], name: "index_credit_payments_on_payment_id"
   end
 
   create_table "freelances", force: :cascade do |t|
@@ -48,6 +58,25 @@ ActiveRecord::Schema.define(version: 20171123003707) do
     t.index ["project_id"], name: "index_invoices_on_project_id"
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.integer "invoice_id"
+    t.decimal "payment_amount"
+    t.string "payment_type"
+    t.string "payment_method"
+    t.date "payment_date"
+    t.text "notes"
+    t.boolean "send_payment_notification"
+    t.boolean "paid_full"
+    t.string "archive_number"
+    t.decimal "credit_applied"
+    t.string "status"
+    t.integer "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_payments_on_client_id"
+    t.index ["invoice_id"], name: "index_payments_on_invoice_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.integer "client_id"
     t.integer "freelance_id"
@@ -71,6 +100,19 @@ ActiveRecord::Schema.define(version: 20171123003707) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["freelance_id"], name: "index_salaries_on_freelance_id"
+  end
+
+  create_table "sent_emails", force: :cascade do |t|
+    t.date "date"
+    t.string "sender"
+    t.string "recipient"
+    t.string "type"
+    t.string "subject"
+    t.text "content"
+    t.integer "notification_id"
+    t.string "notification_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
